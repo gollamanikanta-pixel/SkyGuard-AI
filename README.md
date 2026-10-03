@@ -120,7 +120,7 @@ The app uses SQLite locally by default. To use the configured Supabase project, 
 
 ### Deploying the full app to Vercel with Supabase
 
-The repository is configured for a single Vercel deployment: Vercel serves the built Vite frontend and runs FastAPI as a Python Function. Supabase remains the persistent PostgreSQL database. Deploy the project with the repository root as Vercel's Root Directory; do not set it to `frontend`.
+The repository is configured for a single Vercel deployment: Vercel serves the built Vite frontend through FastAPI's frontend integration and routes API traffic to the Python Function at `api/index.py`. Supabase remains the persistent PostgreSQL database. Deploy the project with the repository root as Vercel's Root Directory; do not set it to `frontend`.
 
 Set these environment variables in Vercel's Project Settings → Environment Variables, at least for Production:
 
@@ -132,7 +132,7 @@ SUPABASE_DB_URL=<Supabase Session pooler URI>
 
 Copy the Session pooler URI from Supabase Project Settings → Database → Connection string. Enter it directly into Vercel's protected environment-variable form; do not add it to a source file, build argument, or Git commit. Do not set `VITE_API_BASE_URL` for the single-domain deployment—the built frontend uses same-origin `/api/...` routes.
 
-Connect a Git repository to Vercel and deploy, or use the Vercel CLI from the project root. This workspace is not currently a Git repository, so a Git-based import requires initializing and pushing it to a private repository first. After deployment, verify `/api/health`, `/docs`, the dashboard, scenario runs, and the Open-Meteo reference panel. Vercel Functions are serverless; continuous monitoring depends on an individual function instance and should not be treated as an always-on production data-ingestion worker.
+Connect this repository to Vercel from its root directory and deploy. After deployment, verify `/api/health`, the dashboard, scenario runs, and the Open-Meteo reference panel. Vercel Functions are serverless; continuous monitoring depends on an individual function instance and should not be treated as an always-on production data-ingestion worker.
 
 ## Demo workflow
 
