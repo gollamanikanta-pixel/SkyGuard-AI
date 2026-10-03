@@ -1,5 +1,39 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": "fastapi",
-  "buildCommand": "npm ci --prefix frontend && npm run build --prefix frontend"
+  "buildCommand": "npm ci --prefix frontend && npm run build --prefix frontend",
+  "rewrites": [
+    {
+      "source": "/stations/:path*",
+      "destination": "/"
+    },
+    {
+      "source": "/anomalies",
+      "destination": "/"
+    },
+    {
+      "source": "/sensor-health",
+      "destination": "/"
+    },
+    {
+      "source": "/alerts",
+      "destination": "/"
+    },
+    {
+      "source": "/analytics",
+      "destination": "/"
+    },
+    {
+      "source": "/raw-data",
+      "destination": "/"
+    },
+    {
+      "source": "/simulation",
+      "destination": "/"
+    },
+    {
+      "source": "/settings",
+      "destination": "/"
+    }
+  ]
 }
