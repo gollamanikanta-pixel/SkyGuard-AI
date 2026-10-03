@@ -3,7 +3,7 @@
   "buildCommand": "npm ci --prefix frontend && npm run build --prefix frontend",
   "outputDirectory": "frontend/dist",
   "functions": {
-    "api/**/*.py": {
+    "api/[...path].py": {
       "maxDuration": 60
     }
   },
