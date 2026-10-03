@@ -6,6 +6,7 @@ import io
 import logging
 from contextlib import asynccontextmanager
 from datetime import datetime, timezone
+from pathlib import Path
 from typing import Any
 from uuid import uuid4
 
@@ -774,6 +775,14 @@ async def retrain_model() -> dict[str, Any]:
         "training_observations_per_station": training["training_observations_per_station"],
         "last_retrained_at": retrained_at,
     }
+
+
+app.frontend(
+    "/",
+    directory=Path(__file__).resolve().parents[2] / "frontend" / "dist",
+    fallback="index.html",
+    check_dir=False,
+)
 
 
 if __name__ == "__main__":

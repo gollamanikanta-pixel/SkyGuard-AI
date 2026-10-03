@@ -1,17 +1,9 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "buildCommand": "npm ci --prefix frontend && npm run build --prefix frontend",
-  "outputDirectory": "frontend/dist",
   "functions": {
-    "api/[...path].py": {
-      "excludeFiles": "{frontend/**,backend/tests/**,backend/skyguard.db,**/__pycache__/**,**/*.pyc}",
+    "backend/app/main.py": {
       "maxDuration": 60
     }
-  },
-  "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/index.html"
-    }
-  ]
+  }
 }
