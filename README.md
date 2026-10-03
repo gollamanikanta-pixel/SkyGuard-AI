@@ -134,6 +134,8 @@ Copy the Session pooler URI from Supabase Project Settings → Database → Conn
 
 Connect this repository to Vercel from its root directory and deploy. After deployment, verify `/api/health`, the dashboard, scenario runs, and the Open-Meteo reference panel. Vercel Functions are serverless; continuous monitoring depends on an individual function instance and should not be treated as an always-on production data-ingestion worker.
 
+After each deployment, verify that `/api/health` returns `status: "ok"`, `/api/v1/dashboard` returns a dashboard summary and station list, and the dashboard and analytics pages finish loading. A health response with `mode: "simulated"` means the app is serving demo observations, not live station measurements; connecting a real station feed and an always-on ingestion service is a separate deployment requirement.
+
 ## Demo workflow
 
 The app runs in demo mode by default and does not require external provider credentials.
