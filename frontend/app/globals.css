@@ -1,0 +1,144 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f4f8fb;
+  --foreground: #1b3449;
+  --panel: #ffffff;
+  --panel-border: #dce6ed;
+  --blue: #1676a8;
+  --green: #197a58;
+  --amber: #956300;
+  --red: #b44242;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button, input, select {
+  font: inherit;
+}
+
+button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible {
+  outline: 3px solid rgba(22, 118, 168, 0.35);
+  outline-offset: 2px;
+}
+
+.sidebar-glow {
+  background: #fff;
+  border-color: var(--panel-border);
+  box-shadow: 1px 0 0 rgba(21, 50, 74, 0.03);
+}
+
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--panel-border);
+  box-shadow: 0 8px 28px rgba(31, 65, 91, 0.045);
+}
+
+.metric-card {
+  background: linear-gradient(145deg, #fff, #f8fbfd);
+  border: 1px solid var(--panel-border);
+  box-shadow: 0 8px 24px rgba(31, 65, 91, 0.055);
+}
+
+.text-gradient {
+  background: linear-gradient(90deg, #1676a8, #4975ac);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+body .text-white {
+  color: #19364d !important;
+}
+
+body .text-slate-100,
+body .text-slate-200,
+body .text-slate-300 {
+  color: #344f65 !important;
+}
+
+body .text-slate-400,
+body .text-slate-500 {
+  color: #647b8e !important;
+}
+
+body .text-cyan-100,
+body .text-cyan-200,
+body .text-cyan-300 {
+  color: #126b96 !important;
+}
+
+body .text-emerald-200,
+body .text-emerald-300 {
+  color: #197a58 !important;
+}
+
+body .text-amber-200,
+body .text-amber-300 {
+  color: #956300 !important;
+}
+
+body .text-rose-200,
+body .text-rose-300 {
+  color: #ad3e4d !important;
+}
+
+body .text-orange-200 {
+  color: #a34c19 !important;
+}
+
+body .text-violet-300,
+body .text-violet-200 {
+  color: #6950a3 !important;
+}
+
+.bg-slate-900\/60,
+.bg-slate-900\/70,
+.bg-slate-900\/80,
+.bg-slate-900\/90,
+.bg-slate-800,
+.bg-slate-800\/80 {
+  background-color: #f1f6f9 !important;
+}
+
+.bg-slate-950\/40 {
+  background-color: #fbfdfe !important;
+}
+
+.leaflet-container {
+  background: #eef4f7;
+  border: 1px solid var(--panel-border);
+  border-radius: 1rem;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #edf3f7;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #b9c8d3;
+  border-radius: 9999px;
+}
+
+@media (max-width: 1023px) {
+  .sidebar-glow {
+    height: auto;
+    width: 100%;
+  }
+}

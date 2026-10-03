@@ -1,0 +1,12 @@
+.env
+.env.local
+.env.*.local
+.venv
+.venv-*/
+backend/skyguard.db
+backend/__pycache__
+backend/**/__pycache__
+backend/.pytest_cache
+frontend/node_modules
+frontend/dist
+frontend/.vercel
