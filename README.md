@@ -78,7 +78,7 @@ skyguard-ai/
 ## Requirements
 
 - Node.js 20.19+ or 22.12+
-- Python 3.11+
+- Python 3.12+
 - npm
 - pip
 
