@@ -3,6 +3,7 @@
 .env.*.local
 .venv
 .venv-*/
+.venv-*/
 backend/skyguard.db
 backend/__pycache__
 backend/**/__pycache__
