@@ -4,6 +4,7 @@
   "outputDirectory": "frontend/dist",
   "functions": {
     "api/[...path].py": {
+      "excludeFiles": "{frontend/**,backend/tests/**,backend/skyguard.db,**/__pycache__/**,**/*.pyc}",
       "maxDuration": 60
     }
   },
