@@ -120,7 +120,7 @@ The app uses SQLite locally by default. To use the configured Supabase project, 
 
 ### Deploying the full app to Vercel with Supabase
 
-The repository is configured for a single Vercel deployment: Vercel serves the built Vite frontend through FastAPI's frontend integration and routes API traffic to the Python Function at `api/index.py`. Supabase remains the persistent PostgreSQL database. Deploy the project with the repository root as Vercel's Root Directory; do not set it to `frontend`.
+The repository is configured for a single Vercel deployment: Vercel serves the built Vite frontend from `frontend/dist` and routes `/api/...` requests to the Python Functions in `api/`, which expose the FastAPI application. Supabase remains the persistent PostgreSQL database. Deploy the project with the repository root as Vercel's Root Directory; do not set it to `frontend`.
 
 Set these environment variables in Vercel's Project Settings → Environment Variables, at least for Production:
 
